@@ -1,18 +1,18 @@
 function getBrowserName() {
-    var lsBrowser = navigator.userAgent;
+    let typeBrowser = navigator.userAgent;
 
-    if (lsBrowser.indexOf("Edge") >= 0) {
+    if (typeBrowser.indexOf("Edge") >= 0) {
         return "Edge";
-    } else if (lsBrowser.indexOf("Firefox") >= 0) {
+    } else if (typeBrowser.indexOf("Firefox") >= 0) {
         return "Firefox";
-    } else if (lsBrowser.indexOf("Chrome") >= 0) {
+    } else if (typeBrowser.indexOf("Chrome") >= 0) {
         return "Chrome";
-    } else if (lsBrowser.indexOf("Safari") >= 0) {
+    } else if (typeBrowser.indexOf("Safari") >= 0) {
         return "Safari";
-    } else if (lsBrowser.indexOf("Opera") >= 0) {
+    } else if (typeBrowser.indexOf("Opera") >= 0) {
         return "Opera";
     }
-    else if (lsBrowser.indexOf("Trident") >= 0) {
+    else if (typeBrowser.indexOf("Trident") >= 0) {
             return "IE";
         }
     else {
@@ -21,17 +21,17 @@ function getBrowserName() {
 }
 
 function getBrowserVersion() {
-    var ua = navigator.userAgent;
-    var browser = getBrowserName();
-    var findIndex = ua.indexOf(browser) + browser.length + 1;
-    var browserVersion = parseFloat(ua.substring(findIndex, findIndex + 3));
+    const ua = navigator.userAgent;
+    const browser = getBrowserName();
+    const findIndex = ua.indexOf(browser) + browser.length + 1;
+    const browserVersion = parseFloat(ua.substring(findIndex, findIndex + 3));
 
     return browserVersion;
 }
-var browserName = getBrowserName();
-var browserVersion = getBrowserVersion();
-var windowHeight = window.screen.availHeight;
-var windowWidth = window.screen.availWidth;
+let browserName = getBrowserName();
+let browserVersion = getBrowserVersion();
+let windowHeight = window.screen.availHeight;
+let windowWidth = window.screen.availWidth;
 
 document.write("You are using version " + browserVersion + " of the "
     + browserName + "  browser to view this page in a browser whose inner window that is " 
